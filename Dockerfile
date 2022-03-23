@@ -8,7 +8,8 @@ WORKDIR /app
 
 FROM base as dev
 RUN apt-get update && apt-get install -y \
-    mono-devel
+    mono-devel \
+    procps
 USER $UNAME:$UNAME
 
 FROM base as build
